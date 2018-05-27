@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ECharts">
+<title>深度分析报告</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+<link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!--Nivo Slider-->
+   <link rel="stylesheet" href="js/slide/default.css" type="text/css" media="screen" />
+   <link rel="stylesheet" href="js/slide/nivo-slider.css" type="text/css" media="screen" />
+<!--Nivo Slider-->
+
+<!--FANCY BOX-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script>
+		!window.jQuery && document.write('<script src="js/jquery-1.4.3.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("a#fancybox").fancybox();	 
+		});
+	</script>
+	<script src="https://cdn.bootcss.com/echarts/3.5.4/echarts.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<style>
+	.fancy a img {
+	border: 1px solid #BBB;
+	padding: 2px;
+	margin: 10px 20px 10px 0;
+	vertical-align: top;
+	}
+	.fancy a img.last {
+	margin-right: 0;	
+	}
+	</style>
+<!--FANCY BOX-->
+</head>
+
+<body>
+<div style="margin-top: 5px; float: right;">
+	<a href="#"><img src="./images/qq.png" width="25" height="28"></a>
+	<a href="#"><img src="./images/qqzone.png" width="25" height="28"></a>
+	<a href="#"><img src="./images/weixin.png" width="25" height="28"></a>
+	<a href="#"><img src="./images/pyq.png" width="25" height="28"></a>
+	<a href="#"><img src="./images/weibo.png" width="25" height="28"></a>
+</div>
+<div id="body-wrapper" class="clearfix"><!--start body-wrapper-->
+	<div id="logo">
+		<img alt="logo" src="images/logo.png" width="250" height="160">
+		<!--<span>Free HTML5 Template</span>-->
+	</div>
+
+	<ul id="menu" class="menu">
+
+		<div class="search bar7">
+	       <div id="container">
+	       <form>
+	        	<button type="submit" onclick="window.location.href='https://www.baidu.com' "></button>
+	            <input type="text" placeholder="请输入您要搜索的内容...">
+	        </form>
+			</div>
+    	</div>
+    	<div class="mulu">
+			<li><a href="./index.html">目录 </a></li>
+			<li><a href="./about.html">关于 </a></li>
+			<li><a href="./index.html">主页 </a></li>
+    	</div>	
+    	
+	</ul>
+	<div class="box">
+		<br>
+		<h1 style="font-size:40px">大数据分析报告</h1>
+		<br>
+		<h3 style="font-size:18px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp————————该数据来源于GitHub社区、stackoverflow和CSDN博客</h3>
+    </div>
+    
+	<div class="one_half">
+		<canvas id="doughnut" height="300" width="470" style="width: 470px; height: 300px;"></canvas>
+				<script>
+				var doughnutData = [
+				{
+					value : 9.64,
+					color : "#337AB7"
+				},
+				{
+					value : 8.43,
+					color : "#929292"
+				},
+				{
+					value : 7.2,
+					color : "#FC8213"
+				},
+				{
+					value : 7.13,
+					color : "#68AE00"
+				},
+				{
+					value : 6.57,
+					color : "#888E22"
+				},
+				{
+					value : 5.70,
+					color : "#888E22"
+				},
+				{
+					value : 5.43,
+					color : "#888E22"
+				},
+				{
+					value : 4.47,
+					color : "#888E22"
+				},
+				{
+					value : 3.40,
+					color : "#888E22"
+				},
+				{
+					value : 3.35,
+					color : "#888E22"
+				},
+				{
+					value : 38.68,
+					color : "#888E22"
+				},
+				];
+				new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
+				</script>
+	</div>
+	<div class="one_half column-last">
+		<canvas id="bar" height="300" width="400" style="width: 400px; height: 300px;"></canvas>
+                <script>
+                var barChartData = {
+                labels : ["java","前端工程师","Android","iOS 11","PHP","产品经理","C#"],
+                datasets : [
+                {
+                    fillColor : "#FC8213",
+                    data : [22.09,14.1,13.09,11.93,10.90,5.73,5.02]
+                }
+                ]
+
+                };
+                new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+				</script>
+	</div><!--end top half content-->
+	<br>
+	
+
+	<div class="clear"></div>
+	
+	<div class="one_half">
+		<h3>2018年社区语言热度</h3>
+		<p>1.JavaScript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.python<br>2.Java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.jquery<br>3.C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.html<br>4.php&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.C++<br>5.android&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.ios<br>......</p>
+	</div>
+	<div class="one_half column-last">
+		<h3>2018年程序猿就职方向</h3>
+		<p></p>
+	</div>
+    
+    <br><br><br><br><br><br><br><br>
+    <div class="clear"></div>
+	<div class="one_half">
+		<h1>分析走势</h1>
+		<canvas id="line" height="300" width="400" style="width: 400px; height: 300px;"> </canvas>
+                    <script>
+                        var lineChartData = {
+						labels : ["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+						datasets : [
+							{
+								fillColor : "rgba(0, 0, 0, 0)",
+								strokeColor : "#FC8213",
+								pointColor : "#FC8213",
+								pointStrokeColor : "#fff",
+								data : [17,17.5,17,14,19.8,18,16,14.2,13.7,12.9]
+							},
+							{
+								fillColor : "rgba(0,0,0, 0)",
+								strokeColor : "#1E90FF",
+								pointColor : "#00FFFF",
+								pointStrokeColor : "#fff",
+								data : [16.5,18.5,18,17.5,15,11.5,12,13.5,13.1,12.8]
+							},
+							{
+								fillColor : "rgba(0, 0, 0, 0)",
+								strokeColor : "#337AB7",
+								pointColor : "#337AB7",
+								pointStrokeColor : "#fff",
+								data : [6.5,6.1,7.2,7,10,10.1,11,12.2,13.4,13.6]
+							},
+							{
+								fillColor : "rgba(0, 0, 0, 0)",
+								strokeColor : "#88FF88",
+								pointColor : "#88FF88",
+								pointStrokeColor : "#fff",
+								data : [8.1,7.2,7.6,7,8.8,10.8,12.4,14.1,15.1,16.8]
+							}
+						]
+						
+					};
+                       new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
+
+                    </script>
+                    <br><br>
+            <font color="#FC8213" size="4">————&nbsp;&nbsp;java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+            <font color="#1E90FF" size="4">————&nbsp;&nbsp;c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+            <font color="#337AB7" size="4">————&nbsp;&nbsp;JavaScript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+            <font color="#00FF00" size="4">————&nbsp;&nbsp;python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+	</div>
+
+	<div class="one_half column-last">
+		<p style="padding:350,0,25,25;font-size: 20px;width: 100%"><br><br><br>分析结果：随着时代进步，后台代码部分可以更多的被软件来辅助完成，减少了后台程序员的工作量，效率也有很大提升。同时企业需求人数也在逐渐减少导致后台编程语言使用人数整体减少。而人群和企业则更加注重UI设计，前端得到了发展。随着人工智能的到来，便于模块化编程的python也迅速发展起来</p>
+	</div>
+	<div class="clear"></div>
+	<br><br>
+	<div id="footer-main"><!--start footer-main-->
+		<br>
+		<h1>&nbsp&nbsp<b>最突出用户数据</b></h1>
+		<div style="float: right">
+			<canvas id="radar" height="300" width="300" style="width: 300px; height: 300px;"></canvas>
+						<script>
+							var radarChartData = {
+								labels : ["c++","JavaScript","python","java","Android","c#","c"],
+								datasets : [
+									{
+										fillColor : "rgba(104, 174, 0, 0.83)",
+										strokeColor : "#68ae00",
+										pointColor : "#68ae00",
+										pointStrokeColor : "#fff",
+										data : [8.1,2.8,9.6,8.05,4.10,5.16]
+									},
+									{
+										fillColor : "rgba(236, 133, 38, 0.82)",
+										strokeColor : "#ec8526",
+										pointColor : "#ec8526",
+										pointStrokeColor : "#fff",
+										data : [5.82,5.99,6.35,6.10,5.51,5.6,6.2]
+									}
+								]
+								
+							};
+							new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
+						</script>
+		</div>
+		<h3>用户:Ladislav<h3>
+		<p>ID：413501</p>
+		<p>荣誉值：316207</p>
+		<p>突出技能：python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;排名：0.12%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;评分：9.6</p>
+		<p>掌握技能：c++、java、c</p>
+		<p>技能评分
+		<div id="main" style="width: 100%;height:300px; ">
+		<script type="text/javascript">
+		     var myChart = echarts.init(document.getElementById('main'));
+		    var category = ['c', 'java', 'c++', 'python'];
+		    var barData = [5.16,8.05, 8.1, 9.6];
+		    var option = {
+		        tooltip: {
+		            trigger: 'axis',
+		            axisPointer: {
+		            type: 'shadow'
+		            }
+		        },
+		        grid: {
+		            left: '3%',
+		            right: '4%',
+		            bottom: '3%',
+		            containLabel: true
+		        },
+		        xAxis: {
+		            type: 'value',
+		            axisLine: {
+		                show: false
+		            },
+		            axisTick: {
+		                show: false
+		            }
+		        },
+		        yAxis: {
+		            type: 'category',
+		            data: category,
+		            splitLine: {show: false},
+		            axisLine: {
+		                show: false
+		            },
+		            axisTick: {
+		                show: false
+		            },
+		            offset: 10,
+		            nameTextStyle: {
+		                fontSize: 15
+		            }
+		        },
+		        series: [
+		            {
+		                name: '评分',
+		                type: 'bar',
+		                data: barData,
+		                barWidth: 14,
+		                barGap: 10,
+		                smooth: true,
+		            }
+		        ]
+		    };
+		    myChart.setOption(option);
+		</script>
+	<br><br>
+	</div><!--end footer-main-->
+	
+	
+
+</div><!--end-body wrapper-->
+<br><br>
+<div >
+	<p id="footer-text">&copyCopyright 2018.  &nbsp神农架小土豆 </p>
+</div>
+</body>
+</html>

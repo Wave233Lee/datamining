@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ECharts">
+<title>搜索用户</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+<link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!--Nivo Slider-->
+   <link rel="stylesheet" href="js/slide/default.css" type="text/css" media="screen" />
+   <link rel="stylesheet" href="js/slide/nivo-slider.css" type="text/css" media="screen" />
+<!--Nivo Slider-->
+
+<!--FANCY BOX-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script>
+		!window.jQuery && document.write('<script src="js/jquery-1.4.3.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("a#fancybox").fancybox();	 
+		});
+	</script>
+	<script src="https://cdn.bootcss.com/echarts/3.5.4/echarts.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<style>
+	.fancy a img {
+	border: 1px solid #BBB;
+	padding: 2px;
+	margin: 10px 20px 10px 0;
+	vertical-align: top;
+	}
+	.fancy a img.last {
+	margin-right: 0;	
+	}
+	</style>
+<!--FANCY BOX-->
+</head>
+<body>
+<div style="margin-top: 5px; float: right;">
+	<a href="#"><img src="./images/qq.png" width="25" height="28"></a>
+	<a href="#"><img src="./images/qqzone.png" width="25" height="28"></a>
+	<a href="#"><img src="./images/weixin.png" width="25" height="28"></a>
+	<a href="#"><img src="./images/pyq.png" width="25" height="28"></a>
+	<a href="#"><img src="./images/weibo.png" width="25" height="28"></a>
+</div>
+<div id="body-wrapper" class="clearfix"><!--start body-wrapper-->
+	<div id="logo">
+		<img alt="logo" src="images/logo.png" width="250" height="160">
+		<!--<span>Free HTML5 Template</span>-->
+	</div>
+
+	<ul id="menu" class="menu">
+
+		<div class="search bar7">
+	       <div id="container">
+	       <form>
+	        	<button type="submit" onclick="window.location.href='https://www.baidu.com' "></button>
+	            <input type="text" placeholder="请输入您要搜索的内容...">
+	        </form>
+			</div>
+    	</div>
+    	<div class="mulu">
+			<li><a href="./index.html">目录 </a></li>
+			<li><a href="./about.html">关于 </a></li>
+			<li><a href="./index.html">主页 </a></li>
+    	</div>	
+    	
+	</ul>
+	
+	<div class="clear"></div>
+
+	
+	
+	<div id="footer-main"><!--start footer-main-->
+		<br>
+		<h1>&nbsp&nbsp<b>个人数据分析结果</b></h1>
+		
+		
+		<div style="float: right">
+			<canvas id="radar" height="300" width="300" style="width: 300px; height: 300px;"></canvas>
+						<script>
+							var radarChartData = {
+								labels : ["c++","JavaScript","python","java","Android","c#","c"],
+								datasets : [
+									{
+										fillColor : "rgba(104, 174, 0, 0.83)",
+										strokeColor : "#68ae00",
+										pointColor : "#68ae00",
+										pointStrokeColor : "#fff",
+										data : [8.4,0,3.04,8.23,6.03,0]
+									},
+									{
+										fillColor : "rgba(236, 133, 38, 0.82)",
+										strokeColor : "#ec8526",
+										pointColor : "#ec8526",
+										pointStrokeColor : "#fff",
+										data : [5.82,5.99,6.35,6.10,5.51,5.6,6.2]
+									}
+								]
+								
+							};
+							new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
+						</script>
+		</div>
+		<h3>用户:Ralf<h3>
+		<p>ID：413251</p>
+		<p>荣誉值：8016</p>
+		<p>突出技能：c++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;排名：11.11%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;评分：8.4</p>
+		<p>掌握技能：android、python、c#</p>
+		<p>技能评分
+		<div id="main" style="width: 100%;height:300px; ">
+		<script type="text/javascript">
+		     var myChart = echarts.init(document.getElementById('main'));
+		    var category = ['python', 'Android', 'c#', 'c++'];
+		    var barData = [3.1, 6.03, 8.36, 8.4];
+		    var option = {
+		        tooltip: {
+		            trigger: 'axis',
+		            axisPointer: {
+		            type: 'shadow'
+		            }
+		        },
+		        grid: {
+		            left: '3%',
+		            right: '4%',
+		            bottom: '3%',
+		            containLabel: true
+		        },
+		        xAxis: {
+		            type: 'value',
+		            axisLine: {
+		                show: false
+		            },
+		            axisTick: {
+		                show: false
+		            }
+		        },
+		        yAxis: {
+		            type: 'category',
+		            data: category,
+		            splitLine: {show: false},
+		            axisLine: {
+		                show: false
+		            },
+		            axisTick: {
+		                show: false
+		            },
+		            offset: 10,
+		            nameTextStyle: {
+		                fontSize: 15
+		            }
+		        },
+		        series: [
+		            {
+		                name: '评分',
+		                type: 'bar',
+		                data: barData,
+		                barWidth: 14,
+		                barGap: 10,
+		                smooth: true,
+		            }
+		        ]
+		    };
+		    myChart.setOption(option);
+		</script>
+	<br><br>
+	</div><!--end footer-main-->
+	<p>
+	
+
+</div><!--end-body wrapper-->
+<br><br>
+<div >
+	<p id="footer-text">&copyCopyright 2018.  &nbsp神农架小土豆 </p>
+</div>
+</body>
+</html>
